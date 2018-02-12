@@ -14,15 +14,15 @@ class ApplicationController < ActionController::Base
   
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
-                                      keys: [:firstname,
-                                              :lastname,
+                                      keys: [:first_name,
+                                              :last_name,
                                               :citizen_id,
                                               :student_id,
                                               :instructor_id,
                                               :department])
     devise_parameter_sanitizer.permit(:account_update,
-                                      keys: [:firstname,
-                                      :lastname,
+                                      keys: [:first_name,
+                                      :last_name,
                                       :citizen_id,
                                       :student_id,
                                       :instructor_id,
