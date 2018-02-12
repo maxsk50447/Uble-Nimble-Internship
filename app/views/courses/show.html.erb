@@ -8,7 +8,7 @@
 
       <h3>Course ID</h3><br />
       <p><%= @course.course_id %></p>
-      <% if !readyApply?(current_user.firstname) %> 
+      <% if !readyApply?(current_user.first_name) %> 
         <%= link_to apply_course_path(@course), class: 'btn btn-success', method: :post do %>
         <i class="fa fa-check"></i> Apply
         <% end %>
