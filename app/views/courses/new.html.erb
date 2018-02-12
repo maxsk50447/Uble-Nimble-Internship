@@ -1,0 +1,63 @@
+<div class="container main-container">
+  <%= form_for :course, url: courses_path do |f| %>
+    <div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h2>Create Course</h2>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 field-label-responsive">
+				<%= f.label :name, 'Course name', class: 'name' %>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+						<div class="input-group-addon" style="width: 2.6rem">
+							<i class="fa fa-book"></i>
+						</div>
+						<%= f.text_field :name, class: "form-control", autofocus: true, autocomplete: "email" %>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-control-feedback">
+					<span class="text-danger align-middle">
+						<!-- Put e-mail validation error messages here -->
+					</span>
+				</div>
+			</div>
+    </div>
+    <div class="row">
+			<div class="col-md-3 field-label-responsive">
+				<%= f.label :course_id, 'Course ID', class: 'name' %>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+						<div class="input-group-addon" style="width: 2.6rem">
+							<i class="fa fa-star"></i>
+						</div>
+						<%= f.text_field :course_id, class: "form-control", autofocus: true, autocomplete: "email" %>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-control-feedback">
+					<span class="text-danger align-middle">
+						<!-- Put e-mail validation error messages here -->
+					</span>
+				</div>
+			</div>
+		</div>
+    
+
+    <div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<%= f.button fa_icon('user-plus', text: 'Create'), type: :submit, class: 'btn btn-success' %>
+			</div>
+		</div>
+  <% end %>
+</div>

@@ -1,0 +1,48 @@
+.btn-outline {
+  margin-right: 10px;
+}
+
+.btn-st-in {
+  border: #f8f9fa;
+  &:active, &:hover{
+    border: 1px solid #e8e8e8;
+    background-color: #f3f3f3;
+  }
+}
+
+.btn-log-in {
+  border: 1px solid #000000;
+  background-color: #f8f9fa;
+  &:active, &:hover {
+    background-color: #f8f9fa;
+    border: 1px solid #000000;
+  }
+}
+
+.btn-label {
+  color: #81868f;
+  &:active, &:hover {
+    text-decoration: none;
+    color: #81868f;
+  }
+}
+
+.btn-sign-up {
+  border: none;
+  background-color: #dc5c58;
+  &:active, &:hover {
+    background-color: #992337
+  }
+}
+
+.btn-sign-up-out-label {
+  color: #ffffff;
+  &:active, &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+.show-name {
+  margin: 10px;
+}
