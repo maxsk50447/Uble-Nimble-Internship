@@ -6,7 +6,7 @@ module ApplicationHelper
   def readyApply?(user)
     @course = Course.find(params[:id])
     @course.users.each do |course|
-      if(course.firstname == user)
+      if(course.first_name == user)
         return true
       end
     end
