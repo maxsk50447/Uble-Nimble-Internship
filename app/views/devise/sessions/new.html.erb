@@ -14,7 +14,7 @@
 				<div class="form-group has-danger">
 					<label class="sr-only" for="email">E-Mail </label>
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon" style="width: 2.6rem">
+						<div class="input-group-addon">
 							<i class="fa fa-envelope"></i>
 						</div>
 						<%= f.email_field :email, class: "form-control", placeholder: "you@example.com", autofocus: true, autocomplete: "email" %>
@@ -35,7 +35,7 @@
 				<div class="form-group">
 					<label class="sr-only" for="password">Password</label>
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon" style="width: 2.6rem">
+						<div class="input-group-addon">
 							<i class="fa fa-key"></i>
 						</div>
 						<%= f.password_field :password, class: "form-control", placeholder: "password", autocomplete: "off" %>
@@ -52,18 +52,18 @@
 		</div>
 		<div class="row">
 			<div class="col-md-3"></div>
-			<div class="col-md-6" style="padding-top: .35rem">
+			<div class="col-md-6">
 				<div class="form-check mb-2 mr-sm-2 mb-sm-0">
 					<label class="form-check-label">
 						<% if devise_mapping.rememberable? -%>
 							<%= f.check_box :remember_me, class: "form-check-input" %>
 						<% end -%>
-						<span style="padding-bottom: .15rem">Remember me</span>
+						<span>Remember me</span>
 					</label>
 				</div>
 			</div>
 		</div>
-		<div class="row" style="padding-top: 1rem">
+		<div class="row button-zone">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
 				<%= f.button fa_icon("sign-in", text: "Login"), type: :submit, class: "btn btn-success" %>
