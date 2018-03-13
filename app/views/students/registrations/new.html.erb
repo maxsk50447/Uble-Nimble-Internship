@@ -12,7 +12,7 @@
     </div>
     <div class="row">
 			<div class="form-group register-form-group col-md-6">
-				<label class="col-md-6 label-layout field-label-responsive"for="e-mail">E-mail</label>
+				<label class="col-md-6 label-layout field-label-responsive" for="e-mail">E-mail</label>
 				<div class="input-group">
 					<div class="input-group-addon"><i class="fa fa-envelope icon-layout"></i></div>
 					<%= f.email_field :email, class: "form-control", placeholder: "you@example.com", autofocus: true, autocomplete: "email" %>
@@ -21,7 +21,7 @@
 		</div>
 		<div class="row">
 			<div class="form-group register-form-group col-md-6">
-				<label class="col-md-3 label-layout field-label-responsive"for="password">Password</label>
+				<label class="col-md-3 label-layout field-label-responsive" for="password">Password</label>
 				<% if @minimum_password_length %>
 				<em>(<%= @minimum_password_length %> chars minimum)</em>
 				<% end %>
@@ -33,7 +33,7 @@
 		</div>
 		<div class="row">
 			<div class="form-group register-form-group col-md-6">
-				<label class="col-md-6 label-layout field-label-responsive"for="password_confirm">Confirm Password</label>						
+				<label class="col-md-6 label-layout field-label-responsive" for="password_confirm">Confirm Password</label>						
 				<div class="input-group">
 					<div class="input-group-addon"><i class="fa fa-repeat icon-layout"></i></div>
 					<%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", autocomplete: "off" %>
