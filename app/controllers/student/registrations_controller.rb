@@ -1,4 +1,5 @@
 class Student::RegistrationsController < Devise::RegistrationsController
+  include Devise::Validatable
 
   def new
     build_resource
