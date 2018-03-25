@@ -1,5 +1,3 @@
-# app/controllers/student/registrations_controller.rb
-
 class Student::RegistrationsController < Devise::RegistrationsController
   include Devise::Validatable
 
