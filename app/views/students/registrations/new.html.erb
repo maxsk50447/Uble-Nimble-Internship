@@ -11,138 +11,68 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 field-label-responsive">
-        <label for="email">E-Mail</label>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-envelope"></i></div>
-            <%= f.email_field :email, class: "form-control", placeholder: "you@example.com", autofocus: true, autocomplete: "email" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-control-feedback">
-          <span class="text-danger align-middle">
-            <!-- Put e-mail validation error messages here -->
-          </span>
-        </div>
-      </div>
-    </div>
+			<div class="form-group register-form-group col-md-6">
+				<label class="col-md-6 label-layout field-label-responsive" for="e-mail">E-mail</label>
+				<div class="input-group">
+					<div class="input-group-addon"><i class="fa fa-envelope icon-layout"></i></div>
+					<%= f.email_field :email, class: "form-control", placeholder: "you@example.com", autofocus: true, autocomplete: "email" %>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group register-form-group col-md-6">
+				<label class="col-md-3 label-layout field-label-responsive" for="password">Password</label>
+				<% if @minimum_password_length %>
+				<em>(<%= @minimum_password_length %> chars minimum)</em>
+				<% end %>
+				<div class="input-group">
+					<div class="input-group-addon"><i class="fa fa-key icon-layout"></i></div>
+					<%= f.password_field :password, class: "form-control", placeholder: "Your password", autocomplete: "off" %>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group register-form-group col-md-6">
+				<label class="col-md-6 label-layout field-label-responsive" for="password_confirm">Confirm Password</label>						
+				<div class="input-group">
+					<div class="input-group-addon"><i class="fa fa-repeat icon-layout"></i></div>
+					<%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", autocomplete: "off" %>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group register-form-group col-md-6">
+				<label class="col-md-6 label-layout field-label-responsive" for="first_name">Firstname</label>						
+				<div class="input-group">
+					<div class="input-group-addon"><i class="fa fa-address-book icon-layout"></i></div>
+					<%= f.text_field :first_name, class: "form-control", placeholder: "Your firstname", autofocus: true %>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group register-form-group col-md-6">
+				<label class="col-md-6 label-layout field-label-responsive" for="last_name">Lastname</label>						
+				<div class="input-group">
+					<div class="input-group-addon"><i class="fa fa-address-book-o icon-layout"></i></div>
+					<%= f.text_field :last_name, class: "form-control", placeholder: "Your lastname", autofocus: true %>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group register-form-group col-md-6">
+				<label class="col-md-6 label-layout field-label-responsive" for="citizen_id">Citizen ID</label>						
+				<div class="input-group">
+					<div class="input-group-addon"><i class="fa fa-address-card icon-layout"></i></div>
+					<%= f.text_field :citizen_id, class: "form-control", placeholder: "Your citizenID", autofocus: true %>
+				</div>
+			</div>
+		</div>
     <div class="row">
-      <div class="col-md-3 field-label-responsive">
-        <label for="password">Password</label>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> chars minimum)</em>
-          <% end %>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group has-danger">
-          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
-            <%= f.password_field :password, class: "form-control", placeholder: "Your password", autocomplete: "off" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-control-feedback">
-          <span class="text-danger align-middle">
-
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 field-label-responsive">
-        <label for="password">Confirm Password</label>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-repeat"></i></div>
-            <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", autocomplete: "off" %>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 field-label-responsive">
-        <label for="name">Firstname</label>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-address-book"></i></div>
-            <%= f.text_field :first_name, class: "form-control", placeholder: "Your firstname", autofocus: true %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-control-feedback">
-          <span class="text-danger align-middle">
-            <!-- Put name validation error messages here -->
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 field-label-responsive">
-        <label for="name">Lastname</label>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-address-book-o"></i></div>
-            <%= f.text_field :last_name, class: "form-control", placeholder: "Your lastname", autofocus: true %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-control-feedback">
-          <span class="text-danger align-middle">
-            <!-- Put name validation error messages here -->
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 field-label-responsive">
-        <label for="name">Citizen ID</label>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-address-card"></i></div>
-            <%= f.text_field :citizen_id, class: "form-control", placeholder: "Your citizenID", autofocus: true %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-control-feedback">
-          <span class="text-danger align-middle">
-            <!-- Put name validation error messages here -->
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 field-label-responsive">
-        <label for="name">Student ID</label>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-id-card-o"></i></div>
-            <%= f.text_field :student_id, class: "form-control", placeholder: "Your studentID", autofocus: true %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-control-feedback">
-          <span class="text-danger align-middle">
-            <!-- Put name validation error messages here -->
-          </span>
+      <div class="form-group register-form-group col-md-6">
+        <label class="col-md-6 label-layout field-label-reponsive" for="student_id">Student ID</label>            
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-id-card-o icon-layout"></i></div>
+          <%= f.text_field :student_id, class: "form-control", placeholder: "Your studentID", autofocus: true %>
         </div>
       </div>
     </div>
