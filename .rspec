@@ -1,0 +1,4 @@
+app/.spec
+--format documentation
+--color
+--require spec_helper
