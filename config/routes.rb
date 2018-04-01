@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # routes.rb
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations'}
   devise_for :students, only: :registrations, controllers: { registrations: 'student/registrations' }
   devise_for :instructors, only: :registrations, controllers: { registrations: 'instructor/registrations' }
 
