@@ -18,6 +18,7 @@
 // Modules
 //= require ./landing
 //= require ./table-link
+//= require ./google-analytics
 
 // Application
 //= require ./app
