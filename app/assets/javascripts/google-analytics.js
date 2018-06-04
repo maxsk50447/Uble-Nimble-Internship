@@ -21,7 +21,13 @@
       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
       ga('create', 'UA-120231444-1', 'auto');
-      ga('send', 'pageview');
+      
+      document.addEventListener('turbolinks:load', function (event) {
+        if (typeof ga === 'function') {
+          ga('set', 'location', event.data.url);
+          return ga('send', 'pageview');
+        }
+      });
     },
 
     Init: function () {
