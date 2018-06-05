@@ -12,7 +12,6 @@ var ready = function() {
   Uble.Init = (function() {
     Uble.App.Landing.Init();
     Uble.App.TableLink.Init();
-    Uble.App.GoogleAnalytics.Init();
   })();
 };
 
